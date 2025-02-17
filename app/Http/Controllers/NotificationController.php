@@ -13,7 +13,7 @@ class NotificationController extends Controller
         if(!$user){
             abort(404);
         }
-        return view('users.profile', compact('user'));
+        
     }
     public function readNotify($id){
         $notification = Auth::user()->unreadNotifications->where('id', $id)->first();

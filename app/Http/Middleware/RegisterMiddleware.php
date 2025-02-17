@@ -16,7 +16,9 @@ class RegisterMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+
         if(!Auth::check()){
+            
             return redirect()->route('registerForm');
         }
         return $next($request);

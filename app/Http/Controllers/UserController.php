@@ -13,7 +13,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request ;
 use Illuminate\Support\Facades\Storage;
-class AuthController extends Controller
+class UserController extends Controller
 {
    public function registerForm(){
     return view('auth.register');
@@ -23,6 +23,7 @@ class AuthController extends Controller
     $filePath = $avatar->store('image', 'public');
     return $filePath;
 }
+
 public function register(AuthRegisterRequest $request)
 {
     $uploadedAvatar = null;
