@@ -21,7 +21,7 @@ class SendSmsToEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Blog Site',
+            subject: 'For Exam',
         );
     }
 
