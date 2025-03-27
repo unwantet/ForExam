@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NotificationController;
 
 Route::get('/',[MainController::class,'dashboard'])->name('home');
-Route::get('Mainpage',[MainController::class,'index'])->name('main');
+Route::get('Mainpage',[MainController::class,'index'])->name('main' );
 Route::middleware('post')->group(function () {
 Route::get('/register',[UserController::class,'registerForm'])->name('registerForm');//->middleware('post');
 Route::get('/email-verify',[UserController::class,'emailVerify'])->name('email.verify');
@@ -23,7 +23,7 @@ Route::middleware('register')->group(function () {
 Route::get('edituser/{id}',[UserController::class,'editForm'])->name('editprofile');
 Route::put('updateuser', [UserController::class,'update'])->name('update.profile');
 Route::get('/user/profile/{id}',[UserController::class,'userprofile'])->name('users.profile');
-Route::delete('/logout',[UserController::class,'logout'])->name('logout');
+Route::delete('/logout', [UserController::class,'logout'])->name('logout');
 Route::get('my/profile',[UserController::class,'my_profile'])->name('my.profile');
 Route::post( '/comments/store', [CommentController::class, 'store'])->name('comments.store');
 Route::delete( '/comments/destroy/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
