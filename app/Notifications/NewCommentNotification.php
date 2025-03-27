@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notification;
 
 class NewCommentNotification extends Notification
 {
-    use Queueable;
+    use  Queueable;
 
     /**
      * Create a new notification instance.
