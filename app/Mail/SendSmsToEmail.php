@@ -11,7 +11,7 @@ use Illuminate\Queue\SerializesModels;
 
 class SendSmsToEmail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable,   SerializesModels;
 
 
     public function __construct(protected User $user)
