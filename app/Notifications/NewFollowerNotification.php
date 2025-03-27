@@ -15,6 +15,8 @@ class NewFollowerNotification extends Notification
     /**
      * Create a new notification instance.
      */
+    // sadsa
+
     public function __construct(protected $user)
     {
         //
